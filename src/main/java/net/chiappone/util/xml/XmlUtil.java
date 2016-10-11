@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/9/2016
  */
 public class XmlUtil {
 
@@ -30,7 +29,7 @@ public class XmlUtil {
     /**
      * Returns a Document object from a given XML file.
      *
-     * @param xml
+     * @param xml XML input stream
      * @return Document
      */
     public static Document getDocumentFromXml( InputStream xml ) {
@@ -58,10 +57,10 @@ public class XmlUtil {
      * Returns the first element value if there are multiple elements for this
      * node.
      *
-     * @param xml
-     * @param parentTag
-     * @param elementTag
-     * @return String
+     * @param xml        XML input stream
+     * @param parentTag  the parent tag
+     * @param elementTag the element tag
+     * @return the element value
      */
     public static String getElementValue( InputStream xml, String parentTag, String elementTag ) {
 
@@ -107,10 +106,10 @@ public class XmlUtil {
     /**
      * This returns a list of all elements for the specified node.
      *
-     * @param xml
-     * @param parentTag
-     * @param elementTag
-     * @return List<String>
+     * @param xml        XML input stream
+     * @param parentTag  the parent tag
+     * @param elementTag the element tag
+     * @return list of element values
      */
     public static List<String> getElementValues( InputStream xml, String parentTag, String elementTag ) {
 
@@ -160,9 +159,9 @@ public class XmlUtil {
      * Finds the specified tag in the document and replaces the node value with
      * the given text replacement.
      *
-     * @param doc
-     * @param tag
-     * @param replacement
+     * @param doc         XML document
+     * @param tag         the tag to find
+     * @param replacement the replacement text
      * @return Document
      */
     public static Document replaceNodeText( Document doc, String tag, String replacement ) {
@@ -189,7 +188,7 @@ public class XmlUtil {
     /**
      * Converts the given string to an XML Document.
      *
-     * @param xml
+     * @param xml XML input
      * @return Document
      */
     public static Document stringToXml( String xml ) {
@@ -231,8 +230,8 @@ public class XmlUtil {
     /**
      * Converts the given XML Document into a String.
      *
-     * @param doc
-     * @return String
+     * @param doc XML document
+     * @return XML string
      */
     public static String xmlToString( Document doc ) {
 
